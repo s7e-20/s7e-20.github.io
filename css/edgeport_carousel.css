@@ -1,0 +1,68 @@
+  .carousel_container {
+    position: relative;
+    width: 320px;
+    margin: auto;
+    perspective: 1000px;
+  }
+  
+  .carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; 
+    animation: rotate360 60s infinite forwards linear;
+  }
+  .carousel__face { 
+    position: absolute;
+    width: 300px;
+    height: 187px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.1);
+    display: flex;
+  }
+  
+  .carousel__face span {
+    margin: auto;
+    font-size: 2rem;
+  }
+  
+  
+  .carousel__face:nth-child(1) {
+    background-image: url("../images/edgeport.png");
+    transform: rotateY(  0deg) translateZ(430px); }
+  .carousel__face:nth-child(2) { 
+    background-image: url("../images/edgeport-security.png");
+      transform: rotateY( 45deg) translateZ(430px); }
+  .carousel__face:nth-child(3) {
+    background-image: url("../images/edgeport-routing.png");
+    transform: rotateY( 90deg) translateZ(430px); }
+  .carousel__face:nth-child(4) {
+    background-image: url("../images/edgeport-settings-origin.png");
+    transform: rotateY(135deg) translateZ(430px); }
+  .carousel__face:nth-child(5) { 
+    background-image: url("../images/edgeport-CNAMES.png");
+   transform: rotateY(180deg) translateZ(430px); }
+  .carousel__face:nth-child(6) { 
+    background-image: url("../images/edgeport-collaborators.png");
+   transform: rotateY(225deg) translateZ(430px); }
+  .carousel__face:nth-child(7) { 
+    background-image: url("../images/edgeport-access-control.png");
+   transform: rotateY(270deg) translateZ(430px); }
+  .carousel__face:nth-child(8) {
+    background-image: url("../images/edgeport-settings-service.png");
+    transform: rotateY(315deg) translateZ(430px); }
+  
+  
+  
+  @keyframes rotate360 {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(-360deg);
+    }
+  }
+  
